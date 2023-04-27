@@ -21,7 +21,19 @@ describe Solver do
     end
   end
 
- 
-
+  context '#Reverse-string' do
+    it 'takes "hello" argument and returns "olleh"' do
+      expect(@solver.reverse('hello')).to eq 'olleh'
+    end
+    it 'takes "hello world!" argument of more than one word and returns "!dlrow olleh"' do
+      expect(@solver.reverse('hello world!')).to eq '!dlrow olleh'
+    end
+    it 'take symbol and number arguments and reverse them' do
+      expect(@solver.reverse('')).to eq ''
+      expect(@solver.reverse('@#₦%&')).to eq '&%₦#@'
+      expect(@solver.reverse('12345')).to eq '54321'
+      expect(@solver.reverse('!@#098')).to eq '890#@!'
+    end
+  end
  
 end

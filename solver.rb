@@ -10,7 +10,9 @@ class Solver
       result
     end
   
+    def reverse(str)
+      raise ArgumentError, 'string must be a string' unless str.is_a? String
+      str.reverse
+    end
     
-  
-    
-  end
+end

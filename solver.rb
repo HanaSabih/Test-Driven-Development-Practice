@@ -15,5 +15,4 @@ class Solver
 
     str.reverse
   end
-
 end
